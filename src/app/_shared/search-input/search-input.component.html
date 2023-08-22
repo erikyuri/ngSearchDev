@@ -1,0 +1,9 @@
+<form class="search-wrapper" [formGroup]="form">
+    <span class="p-input-icon-right p-float-label" >
+        <i class="pi pi-search"></i>
+        <input type="text" pInputText [formControl]="form.controls.search" [style]="searchStyle"/>
+        <label htmlFor="search">{{label}}</label>
+    </span>
+    <p *ngIf="form?.controls?.search?.errors != null && form?.controls?.search?.touched == true" class="alert">*Campo
+        obrigatório</p>
+</form>

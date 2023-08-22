@@ -1,1 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+@import "primeng/resources/themes/saga-purple/theme.css";
+@import "primeng/resources/primeng.css";
+@import "primeicons/primeicons.css";
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap');
+
+body {
+    font-family: var(--font-family);
+}

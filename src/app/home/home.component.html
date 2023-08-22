@@ -1,0 +1,13 @@
+<div class="home-wrapper">
+    <div class="title-wrapper">
+        <h1 class="title">
+            Search&nbsp;<span class="purple">d_evs</span>
+        </h1>
+    </div>
+
+    <form class="form-wrapper" (submit)="onSubmit($event)">
+
+        <app-search-input [label]="'Search'" [searchStyle]="searchStyle"></app-search-input>
+        <app-button [label]="'Search'" [buttonStyle]="buttonStyle"></app-button>
+    </form>
+</div>
