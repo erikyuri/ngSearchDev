@@ -20,4 +20,4 @@
 
 
 # Versão deploy online
- - Adicionei uma versão de deploy online caso não queira atualizar para a última versão do Angular, segue o link: https://ng-search-dev.vercel.app/home
+ - Adicionei uma versão de deploy online caso não queira atualizar para a última versão do Angular, segue o link: https://ng-search-ptodf2vex-erikyuri.vercel.app/home
