@@ -20,7 +20,7 @@ export class ProfileComponent implements OnInit {
   readonly form = inject(SearchInputService).form;
   inputClass = 'p-input-icon-left p-float-label';
   searchStyle = { 'min-width': '590px', 'min-height': '48px', 'border-radius': '6px' };
-  buttonStyle = { 'min-width': '280px', 'min-height': '48px', 'gap': '8px', 'margin': '10px', 'border-radius': '6px' };
+  buttonStyle = { 'min-width': '240px', 'min-height': '48px', 'border-radius': '6px' };
 
   constructor(
     private requestService: RequestService,

@@ -49,12 +49,10 @@ header {
 }
 
 .sidebar {
-
-    position: absolute;
+    display: flex;
     width: 280px;
-    height: 465px;
-    left: 112px;
-    top: 168px;
+    padding: 20px;
+    flex-flow: column;
 
     background: #fff;
     border-radius: 4px;
@@ -62,7 +60,6 @@ header {
 }
 
 .sidebar-card {
-    padding: 20px;
     display: flex;
     flex-flow: column;
 }
@@ -116,17 +113,19 @@ a {
 
 .main {
 
-    position: absolute;
+    display: flex;
+    flex-flow: column;
     min-width: 904px;
     max-width: 1300px;
     min-height: 700px;
     left: 424px;
     top: 168px;
     overflow-y: auto;
+    overflow-x: hidden;
 
     background: #fff;
     border-radius: 4px;
-
+    margin-left: 3%;
 }
 
 ::ng-deep.p-card .p-card-title {

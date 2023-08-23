@@ -65,8 +65,8 @@
                         <p>@{{userData?.twitter_username}}</p>
                     </a>
                 </div>
+                <app-button [label]="'Contato'" [buttonStyle]="buttonStyle" (buttonEvent)="redirectTo()"></app-button>
             </div>
-            <app-button [label]="'Contato'" [buttonStyle]="buttonStyle" (buttonEvent)="redirectTo()"></app-button>
         </section>
 
         <section class="main">
