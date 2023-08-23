@@ -117,11 +117,12 @@ a {
 .main {
 
     position: absolute;
-    width: 904px;
+    min-width: 904px;
+    max-width: 1300px;
     min-height: 700px;
     left: 424px;
     top: 168px;
-    overflow: scroll;
+    overflow-y: auto;
 
     background: #fff;
     border-radius: 4px;
