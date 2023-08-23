@@ -15,7 +15,6 @@ export class RequestService {
 
   httpOptions = {
     headers: new HttpHeaders({
-      'Authorization': 'Bearer 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',
       'Content-Type': 'application/json',
     }),
   };
@@ -25,7 +24,8 @@ export class RequestService {
   }
 
   getRepository(user?: string): Observable<Repositories[]> {
-    return this.http.get<Repositories[]>(`https://api.github.com/users/${user}/repos`, this.httpOptions).pipe(catchError(this.handleError))
+    return this.http.get<Repositories[]>(`https://api.github.com/users/${user}/repos`, this.httpOptions).pipe(
+      map(res => res.sort((a, b) => a.stargazers_count! - b.stargazers_count!).reverse()), catchError(this.handleError))
   }
 
   handleError(error: any) {
