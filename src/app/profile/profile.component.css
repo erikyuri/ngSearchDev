@@ -1,0 +1,160 @@
+.body {
+    min-width: 100vw;
+    min-height: 100vh;
+    background: #FCFCFC;
+    font-size: 16px;
+}
+
+
+header {
+    margin: 20px px;
+    max-width: 100%;
+    max-height: 88px;
+    background: #fff;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    gap: 100px;
+    justify-content: center;
+    padding-right: 350px;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 44px;
+    letter-spacing: 0.01em;
+
+    color: #0069CA;
+
+    max-width: 194px;
+    max-height: 44px;
+}
+
+.purple {
+    color: #8C19D2;
+
+}
+
+.content-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+}
+
+.sidebar {
+
+    position: absolute;
+    width: 280px;
+    height: 465px;
+    left: 112px;
+    top: 168px;
+
+    background: #fff;
+    border-radius: 4px;
+
+}
+
+.sidebar-card {
+    padding: 20px;
+    display: flex;
+    flex-flow: column;
+}
+
+.profile {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-flow: row;
+}
+
+.wrap {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding: 3px;
+    text-align: center;
+}
+
+.profile-image {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+.bio {
+    font-size: 16px;
+    font-weight: 400;
+    font-family: Inter;
+    color: #4A5568;
+    line-height: 24px;
+}
+
+.icon-wrapper {
+    display: flex;
+    flex-flow: row;
+    font-size: 14px;
+    font-family: Inter;
+    font-weight: 400;
+    color: #4A5568;
+    align-items: baseline;
+    gap: 7px;
+}
+
+a {
+    width: 100%;
+    display: flex;
+    align-items: baseline;
+    gap: 7px
+}
+
+.main {
+
+    position: absolute;
+    width: 904px;
+    min-height: 700px;
+    left: 424px;
+    top: 168px;
+    overflow: scroll;
+
+    background: #fff;
+    border-radius: 4px;
+
+}
+
+::ng-deep.p-card .p-card-title {
+    font-family: Inter;
+}
+
+::ng-deep .p-card {
+    border: 0px;
+    border-bottom: 1px solid #E2E8F0;
+    box-shadow: none;
+}
+
+.repository-description {
+
+    font-family: Inter;
+    font-weight: 400;
+    size: 16px;
+}
+
+.card-footer {
+    display: flex;
+    flex-flow: row;
+    gap: 15px;
+    align-items: flex-end;
+}
+
+.last-updated {
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 14px;
+    margin: 0;
+}

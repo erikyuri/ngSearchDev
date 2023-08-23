@@ -1,1 +1,93 @@
-<p>profile works!</p>
+<div class="body">
+    <header>
+
+        <h4 class="title">
+            <label routerLink="home">Search&nbsp;<span class="purple">d_evs</span></label>
+        </h4>
+
+        <form class="form-wrapper" (submit)="onSubmit($event)">
+
+            <app-search-input [label]="inputLabel" [searchStyle]="searchStyle"
+                [inputClass]="inputClass"></app-search-input>
+        </form>
+
+    </header>
+
+    <div class="content-wrapper">
+        <section class="sidebar">
+            <div class="sidebar-card">
+                <div class="profile">
+                    <img [src]="userData?.avatar_url" class="profile-image" loading="lazy">
+                    <div class="wrap">
+                        <h5 style="width: 100%;font-weight: 700;font-size: 20px;margin: 0;">
+                            {{userData?.name||userData?.login}}
+                        </h5>
+                        <label
+                            style="width: 100%; font-size: 14px;font-weight: 400;color: #A0AEC0;">@{{userData?.twitter_username}}</label>
+                    </div>
+                </div>
+
+                <p class="bio">
+                    {{userData?.bio||''}}
+                </p>
+
+                <div class="icon-wrapper">
+                    <i class="pi pi-users" style="font-size: 24px;"></i>
+                    <p>{{userData?.followers}} Seguidores</p>
+                </div>
+                <div class="icon-wrapper">
+                    <i class="pi pi-heart" style="font-size: 24px;"></i>
+                    <p>{{userData?.following}} Seguindo</p>
+                </div>
+                <div class="icon-wrapper">
+                    <i class="pi pi-building" style="font-size: 24px;"></i>
+                    <p>{{userData?.company}}</p>
+                </div>
+                <div class="icon-wrapper">
+                    <i class="pi pi-map-marker" style="font-size: 24px;"></i>
+                    <p>{{userData?.location}}</p>
+                </div>
+                <div class="icon-wrapper">
+                    <i class="pi pi-envelope" style="font-size: 24px;"></i>
+                    <p>{{userData?.email}}</p>
+                </div>
+                <div class="icon-wrapper">
+                    <a [href]="userData?.blog" style="
+                    text-decoration: none;color: #4A5568;">
+                        <i class="pi pi-link" style="font-size: 24px;color: #4A5568;gap: 7px;"></i>
+                        <p>{{userData?.blog}}</p>
+                    </a>
+                </div>
+                <div class="icon-wrapper">
+                    <a [href]="twitterLink" style="
+                    text-decoration: none;color: #4A5568;">
+                        <i class="pi pi-twitter" style="font-size: 24px;color: #4A5568;"></i>
+                        <p>@{{userData?.twitter_username}}</p>
+                    </a>
+                </div>
+            </div>
+            <app-button [label]="'Contato'" [buttonStyle]="buttonStyle" (buttonEvent)="redirectTo()"></app-button>
+        </section>
+
+        <section class="main">
+
+            <p-card *ngFor="let repo of repos" [header]="repo?.name">
+
+                <p class="repository-description">
+                    {{repo?.description}}
+                </p>
+
+                <ng-template pTemplate="footer">
+                    <div class="card-footer">
+                        <i class="pi pi-star" style="font-size: 24px"></i> {{repo.stargazers_count}}
+                        &bull;&nbsp;
+                        <p class="last-updated">
+                            {{repo.last_updated}}
+                        </p>
+                    </div>
+                </ng-template>
+            </p-card>
+
+        </section>
+    </div>
+</div>

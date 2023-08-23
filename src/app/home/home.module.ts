@@ -12,7 +12,7 @@ import { SharedModule } from '../_shared/shared.module';
   imports: [
     CommonModule,
     HomeRoutingModule,
-    SharedModule,
+    SharedModule
   ]
 })
 export class HomeModule { }

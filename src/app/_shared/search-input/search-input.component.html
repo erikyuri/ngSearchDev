@@ -1,5 +1,5 @@
 <form class="search-wrapper" [formGroup]="form">
-    <span class="p-input-icon-right p-float-label" >
+    <span [class]="inputClass" >
         <i class="pi pi-search"></i>
         <input type="text" pInputText [formControl]="form.controls.search" [style]="searchStyle"/>
         <label htmlFor="search">{{label}}</label>

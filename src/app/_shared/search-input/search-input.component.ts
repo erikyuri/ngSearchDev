@@ -10,8 +10,9 @@ import { SearchInputService } from './search-input.service';
 })
 export class SearchInputComponent {
 
-  @Input() label = '';
+  @Input() label?: string = '';
   @Input() searchStyle = {};
+  @Input() inputClass = 'p-input-icon-right p-float-label';
   readonly form = inject(SearchInputService).form;
 
 }

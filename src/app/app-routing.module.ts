@@ -7,11 +7,11 @@ const routes: Routes = [
     loadChildren: () => import('./home/home-routing.module').then(module => module.HomeRoutingModule)
   },
   {
-    path: 'profile',
+    path: 'perfil',
     loadChildren: () => import('./profile/profile-routing.module').then(module => module.ProfileRoutingModule)
   },
   {
-    path: '',
+    path: '**',
     redirectTo: 'home',
     pathMatch: 'full'
   }
